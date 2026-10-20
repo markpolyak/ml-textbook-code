@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mlbook"
+version = "0.1.0"
+description = "Данные и код к учебным пособиям по машинному обучению"
+authors = [{ name = "Mark Polyak" }]
+requires-python = ">=3.10"
+dependencies = ["numpy", "pandas"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

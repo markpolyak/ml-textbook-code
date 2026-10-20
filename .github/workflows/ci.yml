@@ -1,0 +1,27 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    - cron: "0 3 1 * *"   # раз в месяц: не сломалось ли что-то вне репозитория
+  workflow_dispatch:
+
+jobs:
+  notebooks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements*.txt
+      - run: pip install -r requirements-dev.txt
+      - name: Тесты пакета mlbook
+        run: pytest -q
+      - name: Ноутбуки хранятся без выходных данных
+        run: python tools/notebooks.py check
+      - name: Все ноутбуки выполняются
+        run: python tools/notebooks.py run
