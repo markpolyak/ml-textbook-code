@@ -30,6 +30,17 @@ def test_modules():
     assert 0.15 < df["ошибка"].mean() < 0.35
 
 
+def test_modules_ext():
+    df = modules.load_ext()
+    assert df.equals(modules.load_ext())
+    assert list(df.columns) == modules.FEATURES_EXT + ["ошибка"]
+    assert set(df["язык"]) == set(modules.LANGUAGES)
+    assert df["команда"].nunique() == modules.N_TEAMS
+    assert 0.05 < df["покрытие"].isna().mean() < 0.2      # пропуски только в покрытии
+    assert df.drop(columns="покрытие").notna().all().all()
+    assert 0.2 < df["ошибка"].mean() < 0.35
+
+
 def test_examples():
     assert examples.modules5().shape == (5, 5)
     assert examples.flats6()["год"].median() == 2005
