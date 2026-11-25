@@ -7,8 +7,13 @@ name = "mlbook"
 version = "0.1.0"
 description = "Данные и код к учебным пособиям по машинному обучению"
 authors = [{ name = "Mark Polyak" }]
+license = { text = "MIT" }
 requires-python = ">=3.10"
 dependencies = ["numpy", "pandas"]
+
+[project.urls]
+Homepage = "https://ml.markpolyak.ru/"
+Source = "https://github.com/markpolyak/ml-textbook-code"
 
 [tool.setuptools.packages.find]
 where = ["src"]
