@@ -1,0 +1,14 @@
+{
+  "upload_type": "software",
+  "title": "Код и данные к учебным пособиям по машинному обучению",
+  "description": "<p>Ноутбуки Jupyter к главам учебного пособия «Машинное обучение: линейные и вероятностные модели» (книга 1 серии) и пакет mlbook с синтетическими данными, на которых построены примеры книги. Все листинги книги входят в ноутбуки дословно и проверяются в CI.</p><p>Текст книги: <a href=\"https://ml.markpolyak.ru/\">https://ml.markpolyak.ru/</a>.</p>",
+  "creators": [
+    {"name": "Polyak, Mark", "orcid": "0000-0002-8754-4865"}
+  ],
+  "license": "MIT",
+  "language": "rus",
+  "keywords": ["machine learning", "машинное обучение", "scikit-learn", "учебное пособие", "Jupyter"],
+  "related_identifiers": [
+    {"identifier": "https://ml.markpolyak.ru/", "relation": "isSupplementTo", "scheme": "url"}
+  ]
+}

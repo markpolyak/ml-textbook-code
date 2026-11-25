@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "Если вы используете этот код, ссылайтесь на него так."
+type: software
+title: "Код и данные к учебным пособиям по машинному обучению"
+authors:
+  - family-names: Polyak
+    given-names: Mark
+    orcid: "https://orcid.org/0000-0002-8754-4865"
+license: MIT
+repository-code: "https://github.com/markpolyak/ml-textbook-code"
+url: "https://ml.markpolyak.ru/"
+keywords:
+  - machine learning
+  - scikit-learn
+  - Jupyter
